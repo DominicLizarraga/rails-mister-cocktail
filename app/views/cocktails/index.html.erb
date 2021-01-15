@@ -3,7 +3,16 @@
   <h1>Cocktails</h1>
   <ul>
     <% @cocktails.each do |cocktail| %>
-    <li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
+        <li>
+
+            <div class="card-product">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+              <div class="card-product-infos">
+                <h2>  <%= link_to cocktail.name, cocktail_path(cocktail) %> </h2>
+                <p>Product description with <strong>relevant info</strong> only.</p>
+              </div>
+            </div>
+        </li>
     <% end %>
   </ul>
 
@@ -13,12 +22,3 @@
 </div>
 
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Cocktails </h5>
-    <p class="card-text"> <% @cocktails.each do |cocktail| %> </p>
-                            <li>  <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
-                          <% end %>
-    <a href="/cocktails/new" class="btn btn-primary"> Create a cocktail </a>
-  </div>
-</div>
