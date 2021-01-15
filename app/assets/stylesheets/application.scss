@@ -12,4 +12,17 @@
 @import "components/index";
 @import "pages/index";
 
+@import "bootstrap/scss/bootstrap";
 
+@import "config/center";
+
+
+body {
+
+  background: $light-gray;
+
+   h1{
+    font-size: ($title_size * 6);
+   }
+
+}
